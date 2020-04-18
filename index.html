@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pillow Soft - Home</title>
+  </head>
+  <body>
+    <!--
+      Part 1: Main Store Page
+
+      Requirements:
+
+      1. Header across the top must include your store's name, a logo,
+      and use a different background colour, web font, etc.  You must also include
+      a link to your contact.html page.  Your header should include info about
+      what the store is, what it sells, etc.  Use some images to try and draw
+      the user in.  NOTE: place all your site's images in the `src/images/` directory.
+
+      2. Below the header, a multi-column layout of items you can purchase in the
+      store.  You must have at least 10 items in your store, and at least 2
+      categories of items. For example, if you are selling clothing, you might
+      have categories for Men, Women, and Children, and each category would have
+      its own set of items.  Each item should include:
+      
+        - a picture
+        - the item's name/title
+        - a more complete description of the item
+        - a category (i.e., each item must belong to a category)
+        - a price.
+      
+      Each item should be its own "card" (i.e., some kind of box around each item
+      separating one from the next, with suitable whitespace between).
+
+      3. A sidebar (left or right, depending on your design) of the item layout
+      section, showing the different categories of items in your store.  If a
+      user clicks on one of the categories, use CSS and JavaScript to hide all
+      other items in the store (i.e., only show items for the chosen category).
+      Make sure you include a way to return to seeing all categories, and make it
+      obvious to the user that they are only seeing a partial list of items when
+      you filter by category (i.e., use CSS and HTML to change things somehow).
+
+      4. Below the items, a footer with the name of the store, any relevant links you
+      need to give users, as well as a small HTML form for entering an Email
+      address and clicking a "Subscribe" button to subscribe to the store's
+      newsletter. Use https://formspree.io/ to automatically submit the form to
+      your email address (i.e., when a user fills out their email address and
+      clicks submit, *you* should get that information sent to your email
+      address via formspree.io).  Make sure you setup your account on
+      https://formspree.io/.
+
+      5. Use two different Web Fonts for your store.  The titles should be different
+      from any regular text.  Use a free font service like https://fonts.google.com/
+      or any other that you choose.  You can also experiment with different font
+      sizes and colours to draw attention toward or away from various parts of
+      your design.
+
+      6. Pick a colour theme using a tool like https://colorhunt.co/ with at least
+      3 colours (primary, secondary, accent), and use them throughout your site
+      for backgrounds, borders, fonts. Your store page needs to look attractive
+      and marks will be given for good a good looking site.  No one will buy from
+      a store that looks like its owners aren't professional or don't care about
+      details.  Also make sure that the colour contrast in your site is suitable
+      for everyone to read.
+
+      7. Use modern CSS to help you achieve your layout.  For example, Flexbox
+      and CSS Grid can help you create professional looking layouts.  Here
+      are some guides to get you started:
+
+       - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+       - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+       
+      You are also welcome to use existing CSS libraries to help you with your layout,
+      but you must also include your own styles (i.e., you can't use a library
+      for everything in your design).
+
+      8. Make sure you don't use copyrighted materials from other sites.  If you use
+      icons, fonts, images, etc., make sure you are legally permitted to reuse them,
+      and include references to indicate where you got them. Some resources to consider:
+
+        - https://unsplash.com/ for images
+        - https://fontawesome.com/ for icons
+        - https://gallery.manypixels.co/ or https://undraw.co/illustrations for illustrations (SVG)
+
+      9. Make sure you reduce the download size of images you include in your
+      store.  Users don't want to download 10s or 100s of megabytes of data, especially
+      on mobile.  You can use an online tool like https://squoosh.app/ to help you
+      reduce images.  You will lose marks if your images aren't optimized for the  web.
+       
+
+      10. Make sure you have no JavaScript or other errors in your Dev Tools Console.
+      Run your site, and test all aspects of it with the Console open, and fix
+      any issues you encounter.
+
+      11. Make sure your forms all work as they should, testing them yourself,
+      and also have someone else test it for you.  The easiest way to find bugs
+      in software is to let someone who didn't build it try to use it!
+      
+    -->
+    <!-- beginning of header -->
+    <header id="header">
+      <div class="header-container">
+        <!-- left of header (logo area) -->
+        <div class="header-left">
+          <a href="index.html"><img id="logo" src=./images/logo.jpg alt=""></a>
+        </div>
+        <!-- center of header (title area) -->
+        <div class="header-center">
+          <a id="title" href="index.html">Pillow Soft</a>
+        </div>
+        <!-- right of header (nav links area) -->
+        <nav class="header-right" id="navigation-menu">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+          <a class="nav-link" href="#">About</a>
+          <div id="cart">
+            <a href="index.html"><img id="cart-img" src=./images/shopping-cart.png alt=""></a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end of header -->
+    <!-- beginning of main -->
+    <nav class="sidebar">
+      <div class="sidebar-title">Categories</div>
+      <ul class="sidebar-side">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" id="products-ref">All Products</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" id="bed-ref">Bed Pillows</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" id="throw-ref">Throw Pillows</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" id="body-ref">Body Pillows</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- first category-->
+      <div class="category">
+        <div id="category1">
+          <h2 class="category-label">Bed Pillows</h2>
+          <!-- row begins -->
+          <div class="row">
+            <!-- item 1 -->
+            <div class="col">
+              <a href="./images/b-pillow1.jpg"
+                ><img class="item" src="./images/b-pillow1.jpg" alt=""
+              /></a>
+              <h4 class="item-label">Striped</h4>
+              <h3 class="item-price">$19.99</h3>
+            </div>
+            <!-- item 2 -->
+            <div class="col">
+              <a href="./images/b-pillow2.jpg"
+                ><img class="item" src="./images/b-pillow2.jpg" alt=""
+              /></a>
+              <h4 class="item-label">Pattern</h4>
+              <h3 class="item-price">$19.99</h3>
+            </div>
+            <!-- item 3 -->
+            <div class="col">
+              <a href="../images/b-pillow3.jpg"
+                ><img class="item" src="./images/b-pillow3.jpg" alt=""
+              /></a>
+              <h4 class="item-label">Plain</h4>
+              <h3 class="item-price">$14.99</h3>
+            </div>
+          </div>
+          <!-- row ends -->
+        </div>
+      </div>
+      <!-- second category-->
+      <div class="category">
+        <div id="category2">
+          <h2 class="category-label">Throw Pillows</h2>
+          <!-- row begins -->
+          <div class="row">
+            <!-- item 1 -->
+            <div class="col">
+              <a href="./images/t-pillow1.jpg"
+                ><img class="item" src="./images/t-pillow1.jpg" alt=""
+              /></a>
+              <h4 class="item-label">Singles</h4>
+              <h3 class="item-price">$9.99</h3>
+            </div>
+            <!-- item 2 -->
+            <div class="col">
+              <a href="./images/t-pillow2.jpg"
+                ><img class="item" src="./images/t-pillow2.jpg" alt=""
+              /></a>
+              <h4 class="item-label">Twin Set</h4>
+              <h3 class="item-price">$16.99</h3>
+            </div>
+            <!-- item 3 -->
+            <div class="col">
+              <a href="./images/t-pillow3.jpg"
+                ><img class="item" src="./images/t-pillow3.jpg" alt=""
+              /></a>
+              <h4 class="item-label">Trio Set</h4>
+              <h3 class="item-price">$25.00</h3>
+            </div>
+          </div>
+          <!-- row ends -->
+        </div>
+      </div>
+      <!-- third category-->
+      <div class="category">
+        <div id="category3">
+          <h2 class="category-label">Body Pillows</h2>
+          <!-- row begins -->
+          <div class="row">
+            <!-- item 1 -->
+            <div class="col">
+              <a href="./images/body-pillow.jpg"
+                ><img class="item" src="./images/body-pillow.jpg" alt=""
+              /></a>
+              <h4 class="item-label">Standard Body Pillow</h4>
+              <h3 class="item-price">$10.99</h3>
+            </div>
+            <!-- item 2 -->
+            <div class="col">
+              <a href="./images/body-pillow2.webp"
+                ><img class="item" src="./images/body-pillow2.webp" alt=""
+              /></a>
+              <h4 class="item-label">Flannel Body Pillow</h4>
+              <h3 class="item-price">$20.99</h3>
+            </div>
+            <!-- item 3 -->
+            <div class="col">
+              <a href="./images/body-pillow3.jpg"
+                ><img class="item" src="./images/body-pillow3.jpg" alt=""
+              /></a>
+              <h4 class="item-label">Quilted Body Pillow</h4>
+              <h3 class="item-price">$29.99</h3>
+            </div>
+          </div>
+          <!-- row ends -->
+        </div>
+      </div>
+      <!-- fourth category-->
+    </main>
+    <!-- end of main -->
+
+    <!-- beginning of footer -->
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="store-banner">
+          <div class="footer-center">
+            <!-- footer title -->
+            <a id="title-footer" href="index.html">Don't Miss Out on Deals!</a>
+            <!-- form label -->
+            <h2 class="category-label">Subscribe to our Newsletter</h2>
+            <!-- form begin -->
+            <form class="email-sub" action="https://formspree.io/maydzrwl" method="POST">
+              <div class="input-field">
+                <label for="input-name"> Name </label>
+                <input id="input-name" type="text" name="name" />
+              </div>
+
+              <div class="input-field">
+                <label for="reply"> Email </label>
+                <input id="reply" type="email" name="reply" />
+              </div>
+
+              <div class="submit">
+                <input type="submit" value="Subscribe" />
+              </div>
+            </form>
+            <!-- form end -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end of footer -->
+    <script src="script.js"></script>
+  </body>
+</html>
